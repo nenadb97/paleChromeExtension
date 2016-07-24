@@ -53,6 +53,7 @@ var rssReader = {
             var title = entries[i].title;
             var contentSnippet = entries[i].contentSnippet;
             var contentSnippetText = document.createTextNode(contentSnippet);
+            var hr = document.createElement('hr');
 
             var link = document.createElement('a');
             link.setAttribute('href', entries[i].link);
@@ -71,6 +72,8 @@ var rssReader = {
 
             // adding list item to main list
             mainList.appendChild(listItem);
+
+
         }
         container.appendChild(mainList);
     }
