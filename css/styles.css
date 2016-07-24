@@ -102,9 +102,10 @@ body {
     background-image: url("../img/bg.jpg");
     background-attachment: fixed;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #313131;
     font-size: 62.5%;
     line-height: 1;
+    background-repeat: no-repeat;
+    background-color: #100404;
 }
 
 ::selection {
