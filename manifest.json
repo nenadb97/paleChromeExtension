@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+
+  "name": "Palel - Feed",
+  "description": "Everything about Pale in one place.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+    
+  "chrome_url_overrides": {
+    "newtab" : "newtab.html"
+  },
+
+  "icons":{
+    "64":"img/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["js/rss.js", "js/popup.js",  "js/weatherPale.js"]
+    }
+  ],
+   "permissions":[
+    "<all_urls>"
+  ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://code.jquery.com https://query.yahooapis.com; object-src 'self'"
+}
